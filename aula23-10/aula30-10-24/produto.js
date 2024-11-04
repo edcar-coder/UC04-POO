@@ -1,9 +1,10 @@
 class Produto{
-    #nome;
-    #preco;
-    constructor(nome, preco) {
+    #nome
+    #preco
+    constructor(nome, preco){
         this.#nome = nome;
         this.#preco = preco;
+        Object.freeze(this)
         }
         get getNome(){
             return this.#nome
@@ -21,5 +22,4 @@ class Produto{
             return `${this.#nome} - R$ ${this.#preco}`;
         }
       }
-    
     module.exports = {Produto};
